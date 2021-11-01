@@ -39,106 +39,27 @@
             <h2>Best Seller</h2>
 
             <div class="wrap">
-                <div class="card">
-                    <img src="{{asset('asset/image-1.png')}}">
+
+                @foreach($foods as $food)
+
+                <div class="card" onclick="location.href='{{route('detail', $food['id'])}}';">
+                    <img src="{{$food['picture_url']}}">
                     <div class="desc">
-                        <h3>Nasi Goreng</h3>
+                        <h3>{{$food['title']}}</h3>
                         <div class="capsule">
-                            <p>food</p>
-                            <p>rice</p>
+                            @foreach($food['categories'] as $category)
+                                <p>{{$category}}</p>
+                            @endforeach
                         </div>
-                        <h3>IDR. 15k</h3>
+                        <h3>Rp. {{$food['base_price']}}</h3>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="{{asset('asset/image-1.png')}}">
-                    <div class="desc">
-                        <h3>Nasi Goreng</h3>
-                        <div class="capsule">
-                            <p>food</p>
-                            <p>rice</p>
-                        </div>
-                        <h3>IDR. 15k</h3>
-                    </div>
-                </div>
+                @endforeach
 
-                <div class="card">
-                    <img src="{{asset('asset/image-1.png')}}">
-                    <div class="desc">
-                        <h3>Nasi Goreng</h3>
-                        <div class="capsule">
-                            <p>food</p>
-                            <p>rice</p>
-                        </div>
-                        <h3>IDR. 15k</h3>
-                    </div>
-                </div>
 
-                <div class="card">
-                    <img src="{{asset('asset/image-1.png')}}">
-                    <div class="desc">
-                        <h3>Nasi Goreng</h3>
-                        <div class="capsule">
-                            <p>food</p>
-                            <p>rice</p>
-                        </div>
-                        <h3>IDR. 15k</h3>
-                    </div>
-                </div>
             </div>
 
-            <h2>New Menu</h2>
-
-            <div class="wrap">
-                <div class="card">
-                    <img src="{{asset('asset/image-1.png')}}">
-                    <div class="desc">
-                        <h3>Nasi Goreng</h3>
-                        <div class="capsule">
-                            <p>food</p>
-                            <p>rice</p>
-                        </div>
-                        <h3>IDR. 15k</h3>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="{{asset('asset/image-1.png')}}">
-                    <div class="desc">
-                        <h3>Nasi Goreng</h3>
-                        <div class="capsule">
-                            <p>food</p>
-                            <p>rice</p>
-                        </div>
-                        <h3>IDR. 15k</h3>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="{{asset('asset/image-1.png')}}">
-                    <div class="desc">
-                        <h3>Nasi Goreng</h3>
-                        <div class="capsule">
-                            <p>food</p>
-                            <p>rice</p>
-                        </div>
-                        <h3>IDR. 15k</h3>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="{{asset('asset/image-1.png')}}">
-                    <div class="desc">
-                        <h3>Nasi Goreng</h3>
-                        <div class="capsule">
-                            <p>food</p>
-                            <p>rice</p>
-                        </div>
-                        <h3>IDR. 15k</h3>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 

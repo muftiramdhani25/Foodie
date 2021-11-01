@@ -8,3 +8,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+function thanksAlert(){
+    alert("Terima kasih sudah membeli");
+}
+

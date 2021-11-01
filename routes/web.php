@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Models\Food;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
-});
+    $foods = Food::$data;
+    return view('index')->with('foods', $foods);
+})->name('home');
 
-Route::get('/detail', function () {
-    return view('detail');
-});
+Route::get('/detail/{id}', function ($id) {
+    $food = [];
+    $foods = Food::$data;
+
+    foreach ($foods as $item){
+        if ($item['id'] == $id){
+            $food = $item;
+            break;
+        }
+    }
+
+    return view('detail')->with('food', $food);
+})->name('detail');

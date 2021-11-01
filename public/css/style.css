@@ -101,15 +101,18 @@ header p{
 
 .catalog .wrap{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 24px;
     margin-bottom: 12%;
+    justify-content: space-between;
 }
 
 .card{
+    box-sizing: border-box;
     background-color: #ffffff;
     width: 250px;
     padding-bottom: 20px;
-    margin-right: 24px;
+    margin: 20px 0;
     border-radius: 15px;
     box-shadow: 10px 10px 40px gray;
 }

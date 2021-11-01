@@ -17,21 +17,25 @@
 <body>
 
     <section class="detail">
-        <h1>Detail Section</h1>
+        <a href="{{route('home')}}"><img src="{{asset('asset/icon-back.svg')}}"></a>
+        <h1><span>Detail</span> Section</h1>
         <div class="wrap">
-            <img src="{{asset('asset/image-detail.png')}}">
+            <img src="{{$food['picture_url']}}">
 
             <div class="desc">
-                <h2>Nasi Goreng</h2>
+                <h2>{{$food['title']}}</h2>
                 <div class="capsule">
-                    <p>food</p>
-                    <p>rice</p>
+                    @foreach($food['categories'] as $category)
+                        <p>{{$category}}</p>
+                    @endforeach
                 </div>
-                <p class="description">Nasi goreng special dengan dua telor pilihan, kamu bakal dapet kayak gambar disamping kalo kamu order sekarang</p>
-                <a href="">Order Now</a>
+                <p class="description">{{$food['description']}}</p>
+                <a href="" onclick="thanksAlert()">Order Now</a>
             </div>
         </div>
     </section>
+
+    <script src="{{asset('js/script.js')}}"></script>
 
 </body>
 
