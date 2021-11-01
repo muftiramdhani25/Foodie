@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.home{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    padding: 2% 8%;
+}
+
+header p{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.home{
+    padding: 14% 8%;
+    position: relative;
+    height: 100%;
+}
+
+.home h1{
+    font-size: 58px;
+    font-weight: 700;
+}
+
+.home h2{
+    margin-top: 6px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.home a{
+    border-radius: 15px;
+    padding: 1.2rem 4.2rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    background: #FFC448;
+}
+
+.home a:hover{
+    color: #1a202c;
+}
+
+.image-noodles{
+    position: absolute;
+    top: 1%;
+    right: 8%;
+    width: 46%;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(20deg);}
+    50%  {transform: rotate(40deg);}
+    75%  {transform: rotate(-20deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.image-circle{
+    position: absolute;
+    top: -76px;
+    right: 0;
+    width: 58%;
+    z-index: -1;
+}
+
+.image-pattern{
+    position: absolute;
+    top: -120px;
+    right: 0;
+    z-index: -1;
+    width: 52%;
+}
+
+.catalog{
+    height: fit-content;
+    padding: 8% 8%;
+    background: #F9F8F4;
+}
+
+.catalog h1{
+    font-size: 38px;
+    color: #FFC448;
+    margin-bottom: 20px;
+}
+
+.catalog h2{
+    font-size: 32px;
+}
+
+.catalog .wrap{
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 12%;
+}
+
+.card{
+    background-color: #ffffff;
+    width: 250px;
+    padding-bottom: 20px;
+    margin-right: 24px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 40px gray;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: none;
+    transition-delay: 0.1s;
+    cursor: pointer;
+}
+
+.card img{
+    width: 250px;
+}
+
+.card .desc{
+    margin-left: 24px;
+}
+
+.desc h3{
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.desc .capsule{
+    display: flex;
+    margin-bottom: 56px;
+}
+
+.capsule p{
+    padding: 2px 18px;
+    background-color: #FFC448;
+    border-radius: 15px;
+    margin-right: 8px;
+}
