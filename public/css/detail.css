@@ -57,7 +57,8 @@ span{
 .capsule p{
     font-size: 1.2rem;
     padding: 2px 2.4rem;
-    background-color: #C4C4C4;
+    color: #000;
+    background-color: #FFC448;
     border-radius: 15px;
     margin-right: 8px;
     margin-bottom: 1rem;
@@ -79,11 +80,11 @@ span{
 
 .desc a:hover{
     color: #1a202c;
+    box-shadow: 0 2px 2px #666666;
 }
 
 .price{
     font-size: 1.2rem;
     margin-bottom: 4rem;
 }
-
 

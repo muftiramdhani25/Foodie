@@ -16,7 +16,7 @@ use \App\Models\Food;
 
 Route::get('/', function () {
     $foods = Food::$data;
-    return view('index')->with('foods', $foods);
+    return view('app_index')->with('foods', $foods);
 })->name('home');
 
 Route::get('/detail/{id}', function ($id) {
