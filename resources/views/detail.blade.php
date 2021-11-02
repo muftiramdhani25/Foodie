@@ -30,6 +30,7 @@
                     @endforeach
                 </div>
                 <p class="description">{{$food['description']}}</p>
+                <p class="price">Cuma Rp. {{$food['base_price']}}</p>
                 <a href="" onclick="thanksAlert()">Order Now</a>
             </div>
         </div>
